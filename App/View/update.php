@@ -19,7 +19,7 @@ $thisProduct = $productModel->getById($_GET['id']);
         <input type="text" name="price" value="<?php echo $thisProduct->price?>" placeholder="gia"><br>
         <input type="text" name="quantity" value="<?php echo $thisProduct->quantity?>" placeholder="so luong"><br>
         <textarea name="description" cols="30" rows="10" placeholder="mo ta"><?php echo $thisProduct->description?></textarea><br>
-        <input type="date" name="date"><br>
+<!--        <input type="date" name="date"><br>-->
         <button>Luu mat hang</button>
         <button type="button"><a href="index.php?page=list">Thoat</a></button>
     </form>

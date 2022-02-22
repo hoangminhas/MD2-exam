@@ -31,7 +31,7 @@ switch ($page) {
         $productController->addProduct();
         break;
     case 'update':
-        $productController->updateProduct($_GET['id']);
+        $productController->updateProduct($_REQUEST['id']);
         break;
     default:
 //        header("index.php?page=list");

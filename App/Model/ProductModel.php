@@ -41,7 +41,7 @@ class ProductModel
 
     public function updateById($id, $product)
     {
-        $sql = "UPDATE products set (productName, type, price, quantity, description) values(?,?,?,?,?) where id=?";
+        $sql = "UPDATE products set productName=?, type=?, price=?, quantity=?, description=? where id=?";
         $stmt = $this->connektor->prepare($sql);
         $stmt->bindParam(1, $product['productName']);
         $stmt->bindParam(2, $product['type']);

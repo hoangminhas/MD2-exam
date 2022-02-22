@@ -16,7 +16,7 @@ class ProductController
     public function showAllProducts()
     {
         $products = $this->productModel->getAll();
-        include_once "App/View/list.php";
+        include "App/View/list.php";
     }
 
     public function deleteProduct($id)
@@ -28,7 +28,7 @@ class ProductController
     public function addProduct()
     {
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
-            include_once "App/View/create.php";
+            include "App/View/create.php";
         } else {
             $product = [
                 'productName'=> $_POST['productName'],
@@ -48,7 +48,7 @@ class ProductController
     public function updateProduct($id)
     {
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
-            include_once "App/View/update.php";
+            include "App/View/update.php";
         } else {
             $product = [
                 'productName'=> $_POST['productName'],
