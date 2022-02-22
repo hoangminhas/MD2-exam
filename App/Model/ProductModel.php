@@ -28,14 +28,14 @@ class ProductModel
     public function add($product)
     {
 
-        $sql = "INSERT INTO products (productName, type, price, quantity, description) values (?,?,?,?,?)";
+        $sql = "INSERT INTO products (productName, type, price, quantity, date, description) values (?,?,?,?,?,?)";
         $stmt = $this->connektor->prepare($sql);
         $stmt->bindParam(1, $product['productName']);
         $stmt->bindParam(2, $product['type']);
         $stmt->bindParam(3, $product['price']);
         $stmt->bindParam(4, $product['quantity']);
-//        $stmt->bindParam(5, $date);
-        $stmt->bindParam(5, $product['description']);
+        $stmt->bindParam(5, $date);
+        $stmt->bindParam(6, $product['description']);
         $stmt->execute();
     }
 
